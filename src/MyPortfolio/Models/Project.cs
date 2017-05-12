@@ -11,6 +11,11 @@ namespace MyPortfolio.Models
 {
     public class Project
     {
+        public string Name { get; set; }
+        public string Language { get; set; }
+
+        public Project() { }
+
         public static JArray GetProjects()
         {
             var client = new RestClient("https://api.github.com");
@@ -26,6 +31,7 @@ namespace MyPortfolio.Models
             }).Wait();
 
             JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
+            //var projectList = JsonConvert.DeserializeObject<List<Project>>(jsonResponse[0]);
             return jsonResponse;
         }
 
