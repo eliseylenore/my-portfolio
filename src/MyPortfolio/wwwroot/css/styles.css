@@ -1,0 +1,90 @@
+﻿/******
+General Styling
+*****/
+
+p {
+  line-height: 1.6em;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.top {
+  background-color: lightblue;
+  padding: 30px;
+}
+
+.top h3 {
+  float: left;
+  margin-left: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.nav {
+  padding-right: 30px;
+}
+
+/******
+Home Page Styling
+*****/
+
+.spiel h1 {
+  font-size: 72px;
+  padding-bottom: 1em;
+}
+
+.spiel h1,  .about h3, .photo-overlay h4 {
+  font-family: 'Pacifico', cursive;
+}
+
+.spiel, .about h3 {
+  text-align: center;
+}
+
+
+.spaceholder {
+  height: 400px;
+}
+
+
+
+/******
+About Page Styling
+*****/
+
+.profile-pic {
+  border-radius: 25%;
+  margin-bottom: 5rem;
+}
+
+.about h3{
+  font-size: 5rem;
+  margin: 5rem 0;
+}
+
+.about-text {
+  margin-bottom: 5rem;
+}
+
+.contact-info a {
+  display: block;
+  padding: 0 0 0 35px;
+  margin-bottom: 15px;
+  min-height: 30px;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+}
+
+.contact-info a.phone {
+  background-image: url("../img/phone.png");
+}
+
+.contact-info a.email {
+  background-image: url("../img/email.png");
+}
+
+.contact-info a.facebook {
+  background-image: url("../img/facebook.png");
+}
