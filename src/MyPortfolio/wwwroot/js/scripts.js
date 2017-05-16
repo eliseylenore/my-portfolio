@@ -7,16 +7,17 @@
             dataType: 'json',
             complete: function (result) {
                 console.log(result);
-                result.forEach(function (project) {
+                console.log("result.responseJSON[0]: " + result.responseJSON[0]);
+                console.log("result.responseJSON[0].language: " + result.responseJSON[0].language);
+                for (var i = 0; i < 4; i++) {
                     $(".projects").append(
                     "<div class='project-display'>" +
                     "<h1>" +
-                    project.name +
+                    result.responseJSON[i].name +
                     "</h1>" +
-                    "</div>"
-                    );
-                });
-            }
+                    "</div>")
+                }
+                }
+            });
         });
-    });
-});
+  });
