@@ -23,7 +23,9 @@ namespace MyPortfolio
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json");
+                
             Configuration = builder.Build();
         }
         public void ConfigureServices(IServiceCollection services)
