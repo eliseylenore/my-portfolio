@@ -11,24 +11,25 @@
                 console.log(result);
                 console.log("result.responseJSON[0]: " + result.responseJSON[0]);
                 console.log("result.responseJSON[0].language: " + result.responseJSON[0].language);
+                var description = "";                
                 for (var i = 0; i < 4; i++) {
-                    $(".projects").append(
-                    "<div class='project-display'>" +
-                    "<h1>" +
-                    result.responseJSON[i].name +
-                    "</h1>")
-                    if(result.responseJSON[i].description) {
-                        $(".projects").append(
-                            "<p>" +
-                        result.responseJSON[i].description +
-                        "</p>"
-                            );
+                    if (result.responseJSON[i].description) {
+                        description = result.responseJSON[i].description;
                     }
                     $(".projects").append(
-                        "<h4>Stars: " +
-                        result.responseJSON[i].watchers +
-                        "<h4>" +
-                        "</div>") ;                              
+                    "<div class='project-display'>" +
+                    "<h1><a href='" +
+                    result.responseJSON[i].url +
+                    "'>" +
+                    result.responseJSON[i].name +
+                    "</h1></a>" +
+                    "<p>" +
+                    description +
+                    "</p>" + 
+                    "<h4>Stars: " +
+                    result.responseJSON[i].watchers +
+                    "<h4>" +
+                    "</div>") ;                              
                 }
                 
             }         

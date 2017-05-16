@@ -95,3 +95,12 @@ About Page Styling
 .contact-info a.facebook {
   background-image: url("~/img/facebook.png");
 }
+
+/******
+Projects Page Styling
+*****/
+.project-display {
+    background-color: lightcyan;
+    padding: 20px;
+    margin: 20px;
+}
