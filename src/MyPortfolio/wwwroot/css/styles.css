@@ -1,7 +1,6 @@
 ﻿/******
 General Styling
 *****/
-
 p {
   line-height: 1.6em;
 }
@@ -10,8 +9,20 @@ a:hover {
   text-decoration: none;
 }
 
+
+
+/******
+Nav
+*****/
+.nav {
+  padding-right: 30px;
+}
+
+.top, .top a {
+    color: white;
+}
 .top {
-  background-color: lightblue;
+  background-color: #00b3e5;
   padding: 30px;
 }
 
@@ -21,9 +32,6 @@ a:hover {
   display: inline-block;
 }
 
-.nav {
-  padding-right: 30px;
-}
 
 /******
 Home Page Styling

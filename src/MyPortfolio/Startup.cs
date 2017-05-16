@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-//using MyPortfolio.Models;
+using MyPortfolio.Models;
 
 namespace MyPortfolio
 {
@@ -23,18 +23,17 @@ namespace MyPortfolio
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath);
-                //.AddJsonFile("appsettings.json");
+                .AddJsonFile("appsettings.json");
             Configuration = builder.Build();
         }
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            //services.AddEntityFramework()
-               // .AddDbContext<MyPortfolioContext>(options =>
-                  //  options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"])); services.AddEntityFramework()
-                 //.AddDbContext<MyPortfolioContext>(options =>
-                    // options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            services.AddEntityFramework()
+               .AddDbContext<MyPortfolioContext>(options =>
+                  options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"])); services.AddEntityFramework()
+                 .AddDbContext<MyPortfolioContext>(options =>
+                    options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "9537a99bf397554edcfe59eeb762030036035341"
+    "signature": "df87616cec8e7ba2dc4f108f46ad3d2fcd347430"
   },
   "compilationOptions": {
     "defines": [
@@ -16,19 +16,21 @@
     ".NETCoreApp,Version=v1.0": {
       "MyPortfolio/1.0.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": "1.0.1",
-          "Microsoft.AspNetCore.Mvc": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
+          "Microsoft.AspNetCore.Mvc": "1.0.0",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
-          "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
-          "Microsoft.Extensions.Logging.Console": "1.0.0",
-          "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
-          "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
           "Microsoft.AspNetCore.StaticFiles": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
+          "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
+          "Microsoft.Extensions.Options": "1.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
+          "Microsoft.Extensions.Logging.Console": "1.0.0",
+          "Microsoft.NETCore.App": "1.0.0",
+          "Newtonsoft.Json": "10.0.2",
           "RestSharp.NetCore": "105.2.3",
-          "Newtonsoft.Json": "10.0.2"
+          "Microsoft.Extensions.Configuration.Json": "1.0.0"
         },
         "runtime": {
           "MyPortfolio.dll": {}
@@ -619,7 +621,7 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.Server.IISIntegration.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Server.Kestrel/1.0.1": {
+      "Microsoft.AspNetCore.Server.Kestrel/1.0.0": {
         "dependencies": {
           "Libuv": "1.9.0",
           "Microsoft.AspNetCore.Hosting": "1.0.0",
@@ -789,7 +791,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design.Core": "1.0.0-preview2-final",
           "Microsoft.Extensions.CommandLineUtils": "1.0.0",
-          "Microsoft.NETCore.App": "1.0.1"
+          "Microsoft.NETCore.App": "1.0.0"
         },
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -814,7 +816,7 @@
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.Core.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/1.0.1": {
+      "Microsoft.EntityFrameworkCore.Relational/1.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.3.0",
           "Microsoft.EntityFrameworkCore": "1.0.0",
@@ -831,7 +833,7 @@
       },
       "Microsoft.EntityFrameworkCore.Relational.Design/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "1.0.1"
+          "Microsoft.EntityFrameworkCore.Relational": "1.0.0"
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
@@ -840,9 +842,9 @@
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/1.0.1": {
+      "Microsoft.EntityFrameworkCore.SqlServer/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "1.0.1",
+          "Microsoft.EntityFrameworkCore.Relational": "1.0.0",
           "System.Data.SqlClient": "4.1.0",
           "System.Threading.Thread": "4.0.0"
         },
@@ -859,7 +861,7 @@
           "Microsoft.DotNet.ProjectModel": "1.0.0-rc3-003121",
           "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
           "Microsoft.Extensions.CommandLineUtils": "1.0.0",
-          "Microsoft.NETCore.App": "1.0.1",
+          "Microsoft.NETCore.App": "1.0.0",
           "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
         },
         "runtime": {
@@ -941,6 +943,18 @@
         },
         "compile": {
           "lib/netstandard1.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "1.0.0",
+          "System.ComponentModel.TypeConverter": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.Extensions.Configuration.Binder.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.1/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration.EnvironmentVariables/1.0.0": {
@@ -1209,6 +1223,20 @@
         },
         "compile": {
           "lib/netstandard1.0/Microsoft.Extensions.Options.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "1.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0",
+          "Microsoft.Extensions.Options": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.1/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
         }
       },
       "Microsoft.Extensions.PlatformAbstractions/1.0.0": {
@@ -3070,14 +3098,14 @@
         },
         "compileOnly": true
       },
-      "Microsoft.NETCore.App/1.0.1": {
+      "Microsoft.NETCore.App/1.0.0": {
         "dependencies": {
           "Libuv": "1.9.0",
           "Microsoft.CSharp": "4.3.0",
           "Microsoft.CodeAnalysis.CSharp": "1.3.0",
           "Microsoft.CodeAnalysis.VisualBasic": "1.3.0",
           "Microsoft.NETCore.DotNetHostPolicy": "1.0.1",
-          "Microsoft.NETCore.Runtime.CoreCLR": "1.0.4",
+          "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
           "Microsoft.VisualBasic": "10.0.1",
           "NETStandard.Library": "1.6.1",
           "System.Buffers": "4.3.0",
@@ -3131,12 +3159,12 @@
         },
         "compileOnly": true
       },
-      "Microsoft.NETCore.Jit/1.0.4": {
+      "Microsoft.NETCore.Jit/1.0.2": {
         "compileOnly": true
       },
-      "Microsoft.NETCore.Runtime.CoreCLR/1.0.4": {
+      "Microsoft.NETCore.Runtime.CoreCLR/1.0.2": {
         "dependencies": {
-          "Microsoft.NETCore.Jit": "1.0.4",
+          "Microsoft.NETCore.Jit": "1.0.2",
           "Microsoft.NETCore.Windows.ApiSets": "1.0.1"
         },
         "compileOnly": true
@@ -3894,10 +3922,10 @@
       "serviceable": true,
       "sha512": "sha512-xmn6EivvL4Ymo7LP+Jc49WLcIiYsUiujZo0loEbAg473nY2dIHxcxncpFAKzPf/MzqN0qBtaXEP0igYJ813H3Q=="
     },
-    "Microsoft.AspNetCore.Server.Kestrel/1.0.1": {
+    "Microsoft.AspNetCore.Server.Kestrel/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GrTVDsRR6j2WrrTuNsZkG1R8aV1UbsA8TKUD+MKVSpXIoEpQNryCT181Zu94CARowQwFQdW4Q1DwfO4FdAhXiQ=="
+      "sha512": "sha512-TNRTsufpdeoa88kR2NU+mO0IZIyJCcBurkdLx4I9d7MpLV1MCnRCrIeTgFIOWpB+j6kytUUXblzhsd0rfk6+bQ=="
     },
     "Microsoft.AspNetCore.StaticFiles/1.0.0": {
       "type": "package",
@@ -3944,20 +3972,20 @@
       "serviceable": true,
       "sha512": "sha512-H3pHksGErQSEwWyvISlDYMslIXftS4XB2m0AvqBS08ECGHagh27mqm/oIyUetzzRad+C2V0zpguJmR14eMiRaA=="
     },
-    "Microsoft.EntityFrameworkCore.Relational/1.0.1": {
+    "Microsoft.EntityFrameworkCore.Relational/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2LZ746BTMSoAHsqsxFAVYVzo/ziS682z2evAxDnwwg1Fw27MuxqEjl38YWz5OE1TchmtEPxWWVcup+sL6rjPXg=="
+      "sha512": "sha512-LGBab+7o0eq4C3YtvkAxK8W7Ia57eO0Ue0viQgt0STptQ2bUpLzV7q5LfbNl475rt6yTWa/vDQlYVaI64fwqdw=="
     },
     "Microsoft.EntityFrameworkCore.Relational.Design/1.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-pw4EmGTp5U645is0Lyf0C6yU1uQGHVIZiRyxlDNNrRllL0ZjSFKTShv9qbE+fBpvvvArNp2HhDmP7d6vJAt0Dw=="
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/1.0.1": {
+    "Microsoft.EntityFrameworkCore.SqlServer/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-L2G/T2mRUzHN9IrUBh6uz5s0oISR3qmMajAqi+poG1O3swxfxWsvo+dzGcbhyieJN4tT756mw1hzXzfJ8vDx0w=="
+      "sha512": "sha512-zLPrmmZ2b4jM3Hezf4dP2oIVREeXlXfcyNDX4mBZ6xcW+QauxyDpzrB86mnEF1quBdkpbZhv7T+ZbS9XS6Hqdg=="
     },
     "Microsoft.EntityFrameworkCore.Tools/1.0.0-preview2-final": {
       "type": "package",
@@ -3988,6 +4016,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-nJ+Et/rnDMDmGhxvFAKdN3va7y+YDPICv1nUEP8I4IKgOkWwr/dCZHMqxVhJFrkbW9ux8Kd7erC4mvxfZh0WnA=="
+    },
+    "Microsoft.Extensions.Configuration.Binder/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kK8QuBcPQtmKJCkC9enc1uMRFa++mPTuVNm2K5jDVXcAYKRBcFSbdEBvIe1JIgA6dEsAQeqjfHfKSaUJ8f5NFQ=="
     },
     "Microsoft.Extensions.Configuration.EnvironmentVariables/1.0.0": {
       "type": "package",
@@ -4078,6 +4111,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-SdP3yPKF++JTkoa91pBDiE70uQkR/gdXWzOnMPbSj+eOqY1vgY+b8RVl+gh7TrJ2wlCK2QqnQtvCQlPPZRK36w=="
+    },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ov+cv1w81/lVrjqorjSpUvTzJhRVFu2GSRyRQYcGfGWPwrCz6473YoiqK/XNbeBmmF9VVyGPHVMubAH+Atsr3g=="
     },
     "Microsoft.Extensions.PlatformAbstractions/1.0.0": {
       "type": "package",
@@ -4684,10 +4722,10 @@
       "serviceable": true,
       "sha512": "sha512-Sf3k8PkTkWqBmXnnblJbvb7ewO6mJzX6WO2t7m04BmOY5qBq6yhhyXnn/BMM+QCec3Arw3X35Zd8f9eBql0qgg=="
     },
-    "Microsoft.NETCore.App/1.0.1": {
+    "Microsoft.NETCore.App/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-M3iH7u95LntTkJtI/DqN/96MRlb8Wa0SjnXldxHA4FjlvEqghOhwK087bDZAZaTN9C4YHckvaYH3ka9eYWZZZw=="
+      "sha512": "sha512-Bv40dLDrT+Igcg1e6otW3D8voeJCfcAxOlsxSVlDz+J+cdWls5kblZvPHHvx7gX3/oJoQVIkEeO3sMyv5PSVJA=="
     },
     "Microsoft.NETCore.DotNetHost/1.0.1": {
       "type": "package",
@@ -4704,15 +4742,15 @@
       "serviceable": true,
       "sha512": "sha512-GEXgpAHB9E0OhfcmNJ664Xcd2bJkz2qkGIAFmCgEI5ANlQy4qEEmBVfUqA+Z9HB85ZwWxZc1eIJ6fxdxcjrctg=="
     },
-    "Microsoft.NETCore.Jit/1.0.4": {
+    "Microsoft.NETCore.Jit/1.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IcHTGj+vTFcOu7/flwNg+CWIfTsxqHWgj08MKOtYwS5k0EuLvx6PrYsn7vHCV0SUTk1zbQ1l0EJj1UdxTMyx4w=="
+      "sha512": "sha512-Ok2vWofa6X8WD9vc4pfLHwvJz1/B6t3gOAoZcjrjrQf7lQOlNIuZIZtLn3wnWX28DuQGpPJkRlBxFj7Z5txNqw=="
     },
-    "Microsoft.NETCore.Runtime.CoreCLR/1.0.4": {
+    "Microsoft.NETCore.Runtime.CoreCLR/1.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-r4/aP7VYcJ+W/rJVFU+jAdjF4KrsHRDYQJ+p8weUP5n65yLzWXlQTVY6OsR560aV5EF7jc65dqsNXIryUCrEkQ=="
+      "sha512": "sha512-A0x1xtTjYJWZr2DRzgfCOXgB0JkQg8twnmtTJ79wFje+IihlLbXtx6Z2AxyVokBM5ruwTedR6YdCmHk39QJdtQ=="
     },
     "Microsoft.NETCore.Windows.ApiSets/1.0.1": {
       "type": "package",

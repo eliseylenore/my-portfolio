@@ -16,7 +16,7 @@ namespace MyPortfolio.Models
 
         public Project() { }
 
-        public static JArray GetProjects()
+        public static List<Project> GetProjects()
         {
             var client = new RestClient("https://api.github.com");
             var request = new RestRequest("users/eliseylenore/repos", Method.GET);
@@ -25,6 +25,7 @@ namespace MyPortfolio.Models
             client.AddDefaultHeader("User-Agent", "eliseylenore");
 
             var response = new RestResponse();
+
             Task.Run(async () =>
             {
                 response = await GetResponseContentAsync(client, request) as RestResponse;
@@ -32,7 +33,9 @@ namespace MyPortfolio.Models
 
             JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
             //var projectList = JsonConvert.DeserializeObject<List<Project>>(jsonResponse[0]);
-            return jsonResponse;
+            string jsonOutput = jsonResponse.ToString();
+            var githubList = JsonConvert.DeserializeObject<List<Project>>(jsonOutput);
+            return githubList;
         }
 
         public static Task<IRestResponse> GetResponseContentAsync(RestClient theClient, RestRequest theRequest)
