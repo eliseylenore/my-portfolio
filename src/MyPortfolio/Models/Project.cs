@@ -13,18 +13,22 @@ namespace MyPortfolio.Models
     {
         public string Name { get; set; }
         public string Language { get; set; }
+        public string Url { get; set; }
+        public string Description { get; set; }
+        public int StargazersCount { get; set; }
 
         public Project() { }
 
         public static List<Project> GetProjects()
         {
             var client = new RestClient("https://api.github.com");
-            var request = new RestRequest("users/eliseylenore/repos", Method.GET);
+            var request = new RestRequest("users/eliseylenore/starred", Method.GET);
             request.AddParameter("sort", "stars");
             request.AddHeader("Accept", "application / vnd.github.v3 + json");
             client.AddDefaultHeader("User-Agent", "eliseylenore");
 
             var response = new RestResponse();
+
 
             Task.Run(async () =>
             {
@@ -44,7 +48,9 @@ namespace MyPortfolio.Models
             theClient.ExecuteAsync(theRequest, response =>
             {
                 tcs.SetResult(response);
+                
             });
+            
             return tcs.Task;
         }
     }

@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $(".starred-repositories").hide();
     $(".click-for-projects").click(function () {
         console.log("HEYYO");
         $.ajax({
@@ -9,8 +10,7 @@
                 console.log(result);
                 console.log("result.responseJSON[0]: " + result.responseJSON[0]);
                 console.log("result.responseJSON[0].language: " + result.responseJSON[0].language);
-                $(".projects").text("");
-                for (var i = 0; i < 3; i++) {
+                for (var i = 0; i < 4; i++) {
                     $(".projects").append(
                     "<div class='project-display'>" +
                     "<h1>" +
@@ -21,9 +21,9 @@
                 $(".spiel").hide();
                 }
             });
-    });
+        });
     $(".home-button").click(function () {
-        $(".spiel").show();
         $(".projects").hide();
-    })
+        $(".spiel").show();
+    });
   });
