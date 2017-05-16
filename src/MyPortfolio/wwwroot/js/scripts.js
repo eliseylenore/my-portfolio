@@ -8,6 +8,7 @@
             dataType: 'json',
             complete: function (result) {
                 $(".spiel").hide();
+                $(".starred-repositories").show();
                 console.log(result);
                 console.log("result.responseJSON[0]: " + result.responseJSON[0]);
                 console.log("result.responseJSON[0].language: " + result.responseJSON[0].language);

@@ -104,3 +104,7 @@ Projects Page Styling
     padding: 20px;
     margin: 20px;
 }
+
+.starred-repositories {
+    margin: 40px;
+}
