@@ -15,7 +15,7 @@ namespace MyPortfolio.Models
         public string Language { get; set; }
         public string Url { get; set; }
         public string Description { get; set; }
-        public int StargazersCount { get; set; }
+        public int Watchers { get; set; }
 
         public Project() { }
 

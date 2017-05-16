@@ -7,6 +7,7 @@
             url: $(this).data('request-url'),
             dataType: 'json',
             complete: function (result) {
+                $(".spiel").hide();
                 console.log(result);
                 console.log("result.responseJSON[0]: " + result.responseJSON[0]);
                 console.log("result.responseJSON[0].language: " + result.responseJSON[0].language);
@@ -15,11 +16,22 @@
                     "<div class='project-display'>" +
                     "<h1>" +
                     result.responseJSON[i].name +
-                    "</h1>" +
-                    "</div>")                   
+                    "</h1>")
+                    if(result.responseJSON[i].description) {
+                        $(".projects").append(
+                            "<p>" +
+                        result.responseJSON[i].description +
+                        "</p>"
+                            );
+                    }
+                    $(".projects").append(
+                        "<h4>Stars: " +
+                        result.responseJSON[i].watchers +
+                        "<h4>" +
+                        "</div>") ;                              
                 }
-                $(".spiel").hide();
-                }
+                
+            }         
             });
         });
     $(".home-button").click(function () {
