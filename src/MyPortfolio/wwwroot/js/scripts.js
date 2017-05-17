@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     $(".starred-repositories").hide();
+    $(".about-me").hide();
     $(".click-for-projects").click(function () {
         console.log("HEYYO");
         $.ajax({
@@ -8,6 +9,7 @@
             dataType: 'json',
             complete: function (result) {
                 $(".spiel").hide();
+                $(".about").hide();
                 $(".starred-repositories").show();
                 $(".projects").text("");
                 console.log(result);
@@ -36,9 +38,18 @@
                 
             }         
             });
-        });
+    });
+
     $(".home-button").click(function () {
         $(".projects").hide();
+        $(".about-me").hide();
         $(".spiel").show();
+    });
+
+    $(".click-for-about-me").click(function () {
+        $(".about-me").show();
+        $(".spiel").hide();
+        $(".projects").hide();
+        $(".starred-repositories").hide();
     });
   });
