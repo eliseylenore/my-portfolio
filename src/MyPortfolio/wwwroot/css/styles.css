@@ -85,15 +85,15 @@ About Page Styling
 }
 
 .contact-info a.linkedin {
-  background-image: url("~/img/linkedin.png");
+  background-image: url("../img/linkedin.png");
 }
 
 .contact-info a.email {
-  background-image: url("~/img/email.png");
+  background-image: url("../img/email.png");
 }
 
 .contact-info a.facebook {
-  background-image: url("~/img/facebook.png");
+  background-image: url("../img/facebook.png");
 }
 
 /******
