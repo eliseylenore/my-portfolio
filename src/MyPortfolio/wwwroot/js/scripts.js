@@ -9,6 +9,7 @@
             complete: function (result) {
                 $(".spiel").hide();
                 $(".starred-repositories").show();
+                $(".projects").text("");
                 console.log(result);
                 console.log("result.responseJSON[0]: " + result.responseJSON[0]);
                 console.log("result.responseJSON[0].language: " + result.responseJSON[0].language);
@@ -20,7 +21,7 @@
                     $(".projects").append(
                     "<div class='project-display'>" +
                     "<h1><a href='" +
-                    result.responseJSON[i].url +
+                    result.responseJSON[i].html_Url +
                     "'>" +
                     result.responseJSON[i].name +
                     "</h1></a>" +
